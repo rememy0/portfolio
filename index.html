@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smash Bros. Fan Page</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Nav Bar -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">PORTFOLIO</a>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+        </div>
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+    </nav>
+     <!-- Banner Styles -->
+     <header class="banner">
+        <h1>Super Smash Bros. Ultimate Fan Page</h1>
+        <p>Here you can find information about the game and ways to connect with the fandom!</p>
+    </header>
+    <!-- Gameplay -->
+    <section class="gameplay">
+        <h2>Gameplay From Fans</h2>
+        <div class="gameplay-container">
+            <div class="image-wrapper">
+                <img src="images/gameplay1.jpg" alt="In game screenshot of Inkling in battle">
+                <div class="overlay">Inkling dodges an attack and counterstrikes!</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="images/gameplay2.jpg" alt="In game screenshot of Zelda">
+                <div class="overlay">Zelda charging up a powerful magic attack!</div>
+            </div>
+            <div class="image-wrapper">
+                <img src="images/gameplay3.jpg" alt="In game screenshot of multiple playable characters">
+                <div class="overlay">An intense 4-player battle in full action!</div>
+            </div>
+        </div>
+    </section>
+ <!-- Character Select -->
+ <section class="character-video">
+    <h2>Play As Your Favorite Character!</h2>
+    <video controls>
+        <source src="media/characterselect.mov" type="video/quicktime">
+        <source src="media/characterselect.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+    <!-- Blog Posts -->
+    <section class="recent-posts">
+        <h2>Latest Blog Posts</h2>
+        <div class="posts-grid">
+            <article class="post-card">
+                <img src="images/strategy.jpg" alt="Picture of Sandbag from Home Run Contest">
+                <div class="post-content">
+                    <h3>Best Strategies for Tournaments</h3>
+                    <p>Learn the best strategies for winning tournaments in Super Smash Bros. Ultimate. Our guide covers character selection, stage picks, and advanced techniques.</p>
+                </div>
+            </article>
+            <article class="post-card">
+                <img src="images/vinceart.jpg" alt="Picture of Vince the Artist from Nintendo Art Academy">
+                <div class="post-content">
+                    <h3>Latest Fan Art</h3>
+                    <p>Check out the latest fan art inspired by Super Smash Bros. Ultimate. Our community of artists create stunning illustrations of their favorite characters.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+<!-- Sign Up -->
+<section class="signup-content">
+    <h2>Join Our Community</h2>
+    <p>Want to receive updates on new artwork, gaming strategies, and more?</p>
+    <button onclick="document.getElementById('signup-form').style.display='block'">Sign Up</button>
+    <div id="signup-form" class="form-popup">
+        <form class="form-container">
+            <h2>Sign Up for Our Blog</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required> 
+            
+            <button type="submit" class="btn">Submit</button>
+            <button type="button" class="btn cancel" onclick="document.getElementById('signup-form').style.display='none'">Close</button>
+        </form>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials">
+    <h2>What People Are Saying</h2>
+    <div class="testimonial-grid">
+        <div class="testimonial blue horizontal">
+
+            <h3>Anonymous Gamer</h3>
+            <p>"I've been playing Super Smash Bros. since the original game on N64. Ultimate is the best one yet, with so many characters and stages to choose from!"</p>
+
+        </div>
+        
+        <div class="testimonial pink vertical">
+            
+            <h3>Anonymous Gamer</h3>
+            <p>"I love the online mode in Ultimate. It's so much fun to play against other people from around the world."</p>
+        
+        </div>
+        
+        <div class="testimonial purple">
+            
+            <h3>Anonymous Gamer</h3>
+            <p>"The graphics in Ultimate are amazing. The game looks so good on my TV screen!"</p>
+            
+        </div>
+        
+        <div class="testimonial black horizontal">
+            
+            <h3>Anonymous Gamer</h3>
+            <p>"The music in Ultimate is fantastic. I love hearing the soundtracks from all my favorite childhood games."</p>
+            
+        </div>
+        
+        <div class="testimonial red vertical">
+            
+            <h3>Anonymous Gamer</h3>
+            <p>"I love all of the different maps in Ultimate. They're all so unique and fun to play on!"</p>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Smash Bros. Fan Page. | Images and video are all from Smashpedia/Nintendo and are all property of Nintendo. | For educational purposes only</p>
+</footer>
+<script>
+    // Mobile menu
+    function toggleMenu() {
+        const navLinks = document.getElementById('navLinks');
+        navLinks.classList.toggle('active');
+    }
+    
+    // Close mobile menu when a nav link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('navLinks').classList.remove('active');
+        });
+    });
+</script>
+</body>
+</html>
