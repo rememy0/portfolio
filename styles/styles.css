@@ -1,0 +1,410 @@
+/* Head Style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #919191;
+    color: #111111;
+}
+
+/* Banner Section */
+.banner {
+    background: url('../images/ssbuscreen.jpg') center/cover no-repeat;
+    text-align: center;
+    color: black;
+    text-shadow: white 1px 1px 1px;
+    padding: 100px 20px;
+}
+
+.banner h1 {
+    font-size: 2.5em;
+}
+
+.banner p {
+    font-size: 1.2em;
+}
+
+.signup-content {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgb(248, 58, 58);
+}
+
+/* Gameplay Section */
+.gameplay {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.gameplay-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+.image-wrapper {
+    position: relative;
+    width: 25%;
+    border-radius: 10px; 
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8vw;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-wrapper:hover .overlay {
+    opacity: 1;
+}
+
+/* Character Select Video */
+.character-video {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgb(79, 105, 255);
+}
+
+.character-video video {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* Latest blog posts*/
+.recent-posts {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.recent-posts h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.post-card {
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    align-items: center;
+}
+
+.post-card:hover {
+    transform: translateY(-4px);
+}
+
+.post-card img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.post-content {
+    padding: 1rem;
+    width: 100%;
+}
+
+.post-content h3 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+}
+
+/* Button */
+.signup-content button {
+    background: #3244ff;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.signup-content button:hover {
+    background: #091dfd;
+}
+
+
+@media (max-width: 768px) {
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .post-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .post-card img {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 4rem 2rem;
+    background: #919191;
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #333;
+    font-size: 2rem;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonial h3 {
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.testimonial p:last-child {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Testimonial grid */
+.testimonial.blue {
+    background: #495bfe;
+    color: rgb(255, 255, 255);
+    grid-column: span 2;
+}
+
+.testimonial.pink {
+    background: #ff389f;
+    color: rgb(0, 0, 0);
+    grid-row: span 2;
+}
+
+.testimonial.purple {
+    background: rgb(198, 66, 255);
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.testimonial.black {
+    background: #000000;
+    color: white;
+    grid-column: span 2;
+}
+
+.testimonial.red {
+    background: #ff2b2b;
+    color: #ffffff;
+    grid-row: span 2;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .testimonial.blue,
+    .testimonial.black {
+        grid-column: span 1;
+    }
+    
+    .testimonial.pink,
+    .testimonial.red {
+        grid-row: span 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+    }
+}
+
+
+/* Signup popup */
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.form-container input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container .btn {
+    background: rgb(248, 58, 58);
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+}
+
+.form-container .btn:hover {
+    background: #bb0000;
+}
+
+.form-container .cancel {
+    background: #495bfe;
+}
+
+.form-container .cancel:hover {
+    background: #2a3ffe;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #78aaff;
+    color: rgb(0, 0, 0);
+}
+
+/* Navigation Bar styles */
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgb(255, 24, 24);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: blueviolet;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: black;
+}
+
+/* Navbar Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        flex-direction: column;
+        background: white;
+        width: 70%;
+        height: 100vh;
+        padding: 2rem;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        gap: 1rem;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+}
